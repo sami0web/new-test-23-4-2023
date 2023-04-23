@@ -9,11 +9,13 @@ export const counterSlice = createSlice({
 
 
   reducers: {
-
     Load : (state, action) => {
-    state.user= action.payload;
-    
-    },
+    state.user= action.payload; },
+
+    Supr:(state, action) =>{
+
+    state.user.splice(action.index, 1)}
+
  
   },
 
@@ -22,6 +24,6 @@ export const counterSlice = createSlice({
 })
 
 
-export const { Load } = counterSlice.actions
+export const { Load,Supr } = counterSlice.actions
 
 export default counterSlice.reducer
